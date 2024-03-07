@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <title>Verificador de Fibonacci</title>
+</head>
+<body>
+    <script>
+        function checarFibonacci(num) {
+            let a = 0, b = 1, temp;
+            while (a < num) {
+                temp = a;
+                a = b;
+                b = temp + b;
+            }
+            return a === num;
+        }
+
+        let numero = prompt("Digite um número para verificar na sequência de Fibonacci:");
+        numero = parseInt(numero);
+
+        if (checarFibonacci(numero)) {
+            alert(`O número ${numero} pertence à sequência de Fibonacci.`);
+        } else {
+            alert(`O número ${numero} não pertence à sequência de Fibonacci.`);
+        }
+    </script>
+</body>
+</html>
